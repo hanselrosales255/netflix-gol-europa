@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresa tu código de regalo - Netflix</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body class="signup-page">
+    <header class="header">
+        <div class="header-content">
+            <img src="img/Netflix_2015_logo.svg.webp" alt="Netflix" class="logo">
+            <button class="btn-signin" onclick="window.location.href='index.html'" data-i18n="signout">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <section class="payment-giftcode-section">
+        <div class="payment-giftcode-container">
+            <a href="payment.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span data-i18n="backPayment">Cambiar forma de pago</span>
+            </a>
+            
+            <p class="step-indicator" data-i18n="paymentStep">Paso 4 de 4</p>
+            <h1 data-i18n="giftCodeTitle">Ingresa tu código de regalo</h1>
+
+            <form id="giftCodeForm" class="payment-form">
+                <div class="form-group">
+                    <input type="text" id="giftCode" class="form-input" placeholder=" " maxlength="25" required>
+                    <label for="giftCode" class="form-label" data-i18n="giftCodeInput">PIN o código de la tarjeta de regalo</label>
+                </div>
+
+                <div class="price-display">
+                    <span data-i18n="priceMonth">$ 44.900 al mes</span>
+                    <span class="plan-name">Premium</span>
+                    <button type="button" class="btn-link" onclick="window.location.href='plan.html'" data-i18n="changePrice">Cambiar</button>
+                </div>
+
+                <button type="submit" class="btn-primary" data-i18n="redeemCode">Canjear código de regalo</button>
+            </form>
+
+            <p class="recaptcha-notice">
+                Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot. <a href="#" data-i18n="learnMore">Más info</a>.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer footer-simple">
+        <div class="container">
+            <p class="footer-contact"><span data-i18n="footerContact">¿Preguntas? Llama al</span> <a href="tel:018005191570">01 800 519 1570</a></p>
+            
+            <div class="footer-links-horizontal">
+                <a href="#" data-i18n="footerLink1">Preguntas frecuentes</a>
+                <a href="#" data-i18n="footerLink2">Centro de ayuda</a>
+                <a href="#" data-i18n="footerLink10">Términos de uso</a>
+                <a href="#" data-i18n="footerLink11">Privacidad</a>
+                <a href="#" data-i18n="footerLink12">Preferencias de cookies</a>
+                <a href="#" data-i18n="footerLink13">Información corporativa</a>
+            </div>
+            
+            <div class="language-selector footer-lang">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="globe-icon">
+                    <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm4.9 7.2h-2.5c-.1-1.5-.5-2.9-1.1-4.1 1.8.6 3.2 2 3.6 4.1zM8 14.4c-.8 0-2.1-2.6-2.3-5.6h4.6c-.2 3-1.5 5.6-2.3 5.6zm-.3-7.2c.2-3 1.5-5.6 2.3-5.6.8 0 2.1 2.6 2.3 5.6H7.7zm-1.1-4.1c-.6 1.2-1 2.6-1.1 4.1H3c.4-2.1 1.8-3.5 3.6-4.1zM3 8.8h2.5c.1 1.5.5 2.9 1.1 4.1-1.8-.6-3.2-2-3.6-4.1zm7.4 4.1c.6-1.2 1-2.6 1.1-4.1H13c-.4 2.1-1.8 3.5-3.6 4.1z"/>
+                </svg>
+                <select onchange="changeLang(this.value)">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" class="arrow-icon">
+                    <path d="M6 9L1 4h10z"/>
+                </svg>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/payment-giftcode.js"></script>
+</body>
+</html>

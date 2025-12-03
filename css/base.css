@@ -1,0 +1,377 @@
+/* ================================================
+   NETFLIX CLONE - BASE STYLES
+   Estilos base, reset y componentes compartidos
+   ================================================ */
+
+/* CSS Variables */
+:root {
+    --netflix-red: #e50914;
+    --netflix-red-hover: #c11119;
+    --netflix-dark: #000;
+    --netflix-gray: #8c8c8c;
+    --netflix-light-gray: #737373;
+    --error-orange: #e87c03;
+    --success-green: #5fa53f;
+    --bg-gray: #f3f3f3;
+    --border-gray: #e6e6e6;
+}
+
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: 'Netflix Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    background-color: var(--netflix-dark);
+    color: #fff;
+    line-height: 1.5;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Container */
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Hidden Class */
+.hidden {
+    display: none !important;
+}
+
+/* ================================================
+   HEADER STYLES
+   ================================================ */
+
+.header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    padding: 20px 50px;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.logo {
+    height: 45px;
+    width: auto;
+}
+
+.header-actions {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Language Selector */
+.language-selector {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+    padding: 6px 12px;
+    gap: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.language-selector:hover {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.language-selector .globe-icon {
+    color: #fff;
+    flex-shrink: 0;
+}
+
+.language-selector select {
+    background: transparent;
+    color: #fff;
+    border: none;
+    padding: 4px 20px 4px 4px;
+    font-size: 16px;
+    cursor: pointer;
+    appearance: none;
+    outline: none;
+    font-weight: 500;
+}
+
+.language-selector .arrow-icon {
+    position: absolute;
+    right: 12px;
+    pointer-events: none;
+    color: #fff;
+}
+
+.language-selector select option {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Buttons */
+.btn-signin {
+    background-color: var(--netflix-red);
+    color: #fff;
+    border: none;
+    padding: 7px 17px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-signin:hover {
+    background-color: var(--netflix-red-hover);
+}
+
+.btn-primary {
+    width: 100%;
+    background-color: var(--netflix-red);
+    color: #fff;
+    border: none;
+    padding: 18px;
+    border-radius: 4px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+    background-color: var(--netflix-red-hover);
+}
+
+.btn-secondary {
+    width: 100%;
+    background-color: transparent;
+    color: #000;
+    border: 1px solid var(--netflix-gray);
+    padding: 16px;
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin-bottom: 12px;
+}
+
+.btn-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.btn-link {
+    background: none;
+    border: none;
+    color: #0071eb;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: text-decoration 0.2s;
+}
+
+.btn-link:hover {
+    text-decoration: underline;
+}
+
+/* ================================================
+   FOOTER STYLES
+   ================================================ */
+
+.footer {
+    background-color: var(--netflix-dark);
+    padding: 70px 0 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-contact {
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.footer-contact a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
+}
+
+.footer-contact a:hover {
+    text-decoration: none;
+}
+
+.footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-column a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: underline;
+    font-size: 14px;
+}
+
+.footer-column a:hover {
+    text-decoration: none;
+}
+
+.footer-column a[href*="mas-info"],
+.footer-column a[href*="more-info"] {
+    color: #0071eb;
+}
+
+.footer-lang {
+    margin-bottom: 24px;
+    display: inline-flex;
+}
+
+.footer-country {
+    font-size: 14px;
+    margin-top: 24px;
+}
+
+.footer-recaptcha {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 12px;
+}
+
+.footer-recaptcha a {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: underline;
+}
+
+/* Footer Simple (for signup pages) */
+.footer-simple {
+    background-color: #f3f3f3;
+    border-top: 1px solid #e6e6e6;
+    padding: 30px 0;
+}
+
+.footer-simple .footer-contact {
+    color: #737373;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.footer-simple .footer-contact a {
+    color: #737373;
+    text-decoration: none;
+}
+
+.footer-simple .footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-links-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px 16px;
+    margin-bottom: 24px;
+}
+
+.footer-links-horizontal a {
+    color: #737373;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.footer-links-horizontal a:hover {
+    text-decoration: underline;
+}
+
+.footer-simple .language-selector {
+    background-color: transparent;
+    border: 1px solid #737373;
+}
+
+.footer-simple .globe-icon,
+.footer-simple .arrow-icon,
+.footer-simple select {
+    color: #737373;
+}
+
+/* ================================================
+   RESPONSIVE BASE
+   ================================================ */
+
+@media (max-width: 960px) {
+    .header {
+        padding: 16px 30px;
+    }
+    
+    .logo {
+        height: 36px;
+    }
+}
+
+@media (max-width: 740px) {
+    .header {
+        padding: 16px 20px;
+    }
+    
+    .logo {
+        height: 32px;
+    }
+    
+    .header-actions {
+        gap: 12px;
+    }
+    
+    .language-selector {
+        padding: 4px 8px;
+    }
+    
+    .language-selector select {
+        font-size: 14px;
+        padding: 2px 16px 2px 2px;
+    }
+    
+    .btn-signin {
+        padding: 5px 12px;
+        font-size: 13px;
+    }
+    
+    .footer-links {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .footer-links-horizontal {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .footer-simple .footer-contact {
+        font-size: 14px;
+    }
+}

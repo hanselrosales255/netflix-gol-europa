@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body class="signup-page">
+    <header class="header-simple">
+        <div class="header-content">
+            <img src="img/Netflix_2015_logo.svg.webp" alt="NETFLIX" class="logo">
+            <button class="btn-signin" onclick="window.location.href='index.html'" data-i18n="signin">Iniciar sesión</button>
+        </div>
+    </header>
+
+    <section class="plan-section">
+        <div class="plan-container">
+            <!-- Plan Choice Step -->
+            <div class="plan-choice" id="planChoice">
+                <div class="checkmark-icon">
+                    <svg width="50" height="50" viewBox="0 0 50 50">
+                        <circle cx="25" cy="25" r="23" fill="none" stroke="#e50914" stroke-width="2"/>
+                        <path d="M15 25 L22 32 L35 18" stroke="#e50914" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                
+                <p class="step-indicator" data-i18n="planStep">PASO 3 DE 4</p>
+                <h1 data-i18n="planTitle">Elige tu plan</h1>
+                
+                <ul class="plan-features">
+                    <li><svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#e50914"/></svg><span data-i18n="planFeature1">Sin compromisos, cancela cuando quieras.</span></li>
+                    <li><svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#e50914"/></svg><span data-i18n="planFeature2">Todo Netflix a un bajo costo.</span></li>
+                    <li><svg width="24" height="24" viewBox="0 0 24 24"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#e50914"/></svg><span data-i18n="planFeature3">Disfruta sin límites en todos tus dispositivos.</span></li>
+                </ul>
+                
+                <button class="btn-primary" onclick="showPlanSelect()" data-i18n="nextButton">Siguiente</button>
+            </div>
+
+            <!-- Plan Selection Step -->
+            <div class="plan-select hidden" id="planSelect">
+                <p class="step-indicator" data-i18n="planStep">PASO 3 DE 4</p>
+                <h1 data-i18n="planSelectTitle">Selecciona el plan ideal para ti</h1>
+                
+                <!-- Mobile Plan Selector Buttons -->
+                <div class="mobile-plan-selector">
+                    <button class="mobile-plan-btn" data-plan="basic">
+                        <span data-i18n="planBasic">Básico</span>
+                        <small>720p</small>
+                    </button>
+                    <button class="mobile-plan-btn" data-plan="standard">
+                        <span data-i18n="planStandard">Estándar</span>
+                        <small>1080p</small>
+                    </button>
+                    <button class="mobile-plan-btn mobile-plan-btn-active" data-plan="premium">
+                        <span class="plan-badge-small plan-badge-red-small" data-i18n="planMostPopular">Más popular</span>
+                        <span data-i18n="planPremium">Premium</span>
+                        <small>4K + HDR</small>
+                    </button>
+                </div>
+                
+                <div class="plan-cards">
+                    <div class="plan-card plan-basic" data-plan="basic">
+                        <div class="plan-header">
+                            <h3 data-i18n="planBasic">Básico</h3>
+                            <p class="plan-resolution">720p</p>
+                        </div>
+                        
+                        <div class="plan-details">
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planMonthlyPrice">Precio mensual</span>
+                                <span class="plan-value">$ 18.900</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planQuality">Calidad de audio y video</span>
+                                <span class="plan-value">Buena</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planResolution">Resolución</span>
+                                <span class="plan-value">720p (HD)</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planDevices">Dispositivos compatibles</span>
+                                <span class="plan-value">TV, computadora, celular, tablet</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planWatch">Dispositivos del hogar en los que se puede ver Netflix al mismo tiempo</span>
+                                <span class="plan-value">1</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planDownload">Dispositivos de descarga</span>
+                                <span class="plan-value">1</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-card plan-standard" data-plan="standard">
+                        <div class="plan-header">
+                            <h3 data-i18n="planStandard">Estándar</h3>
+                            <p class="plan-resolution">1080p</p>
+                        </div>
+                        
+                        <div class="plan-details">
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planMonthlyPrice">Precio mensual</span>
+                                <span class="plan-value">$ 29.900</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planQuality">Calidad de audio y video</span>
+                                <span class="plan-value">Excelente</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planResolution">Resolución</span>
+                                <span class="plan-value">1080p (Full HD)</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planDevices">Dispositivos compatibles</span>
+                                <span class="plan-value">TV, computadora, celular, tablet</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planWatch">Dispositivos del hogar en los que se puede ver Netflix al mismo tiempo</span>
+                                <span class="plan-value">2</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planDownload">Dispositivos de descarga</span>
+                                <span class="plan-value">2</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="plan-card plan-premium" data-plan="premium">
+                        <div class="plan-badge-red" data-i18n="planMostPopular">Más popular</div>
+                        <div class="plan-header">
+                            <h3 data-i18n="planPremium">Premium</h3>
+                            <p class="plan-resolution">4K + HDR</p>
+                        </div>
+                        
+                        <div class="plan-details">
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planMonthlyPrice">Precio mensual</span>
+                                <span class="plan-value">$ 44.900</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planQuality">Calidad de audio y video</span>
+                                <span class="plan-value">Óptima</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planResolution">Resolución</span>
+                                <span class="plan-value">4K (Ultra HD) + HDR</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planSpatialAudio">Audio espacial (sonido inmersivo)</span>
+                                <span class="plan-value" data-i18n="included">Incluido</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planDevices">Dispositivos compatibles</span>
+                                <span class="plan-value">TV, computadora, celular, tablet</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planWatch">Dispositivos del hogar en los que se puede ver Netflix al mismo tiempo</span>
+                                <span class="plan-value">4</span>
+                            </div>
+                            <div class="plan-detail-row">
+                                <span class="plan-label" data-i18n="planDownload">Dispositivos de descarga</span>
+                                <span class="plan-value">6</span>
+                            </div>
+                        </div>
+                        
+                        <div class="plan-checkmark">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="white">
+                                <circle cx="12" cy="12" r="11" fill="white"/>
+                                <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="#e50914"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Mobile Single Card View (Shows selected plan) -->
+                <div class="mobile-single-plan">
+                    <div class="mobile-plan-header">
+                        <h3 id="mobilePlanName">Premium</h3>
+                        <p id="mobilePlanResolution">4K + HDR</p>
+                    </div>
+                    
+                    <div class="mobile-plan-body">
+                        <div class="mobile-plan-row">
+                            <span class="mobile-plan-label" data-i18n="planMonthlyPrice">Precio mensual</span>
+                            <span id="mobilePrice" class="mobile-plan-value">$ 44.900</span>
+                        </div>
+                        <div class="mobile-plan-row">
+                            <span class="mobile-plan-label" data-i18n="planQuality">Calidad de audio y video</span>
+                            <span id="mobileQuality" class="mobile-plan-value">Óptima</span>
+                        </div>
+                        <div class="mobile-plan-row">
+                            <span class="mobile-plan-label" data-i18n="planResolution">Resolución</span>
+                            <span id="mobileResolution" class="mobile-plan-value">4K (Ultra HD) + HDR</span>
+                        </div>
+                        <div class="mobile-plan-row" id="mobileSpatialRow">
+                            <span class="mobile-plan-label" data-i18n="planSpatialAudio">Audio espacial (sonido inmersivo)</span>
+                            <span id="mobileSpatial" class="mobile-plan-value" data-i18n="included">Incluido</span>
+                        </div>
+                        <div class="mobile-plan-row">
+                            <span class="mobile-plan-label" data-i18n="planDevices">Dispositivos compatibles</span>
+                            <span id="mobileDevices" class="mobile-plan-value">TV, computadora, celular, tablet</span>
+                        </div>
+                        <div class="mobile-plan-row">
+                            <span class="mobile-plan-label" data-i18n="planWatch">Dispositivos del hogar en los que se puede ver Netflix al mismo tiempo</span>
+                            <span id="mobileWatch" class="mobile-plan-value">4</span>
+                        </div>
+                        <div class="mobile-plan-row">
+                            <span class="mobile-plan-label" data-i18n="planDownload">Dispositivos de descarga</span>
+                            <span id="mobileDownload" class="mobile-plan-value">6</span>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="plan-disclaimer">
+                    La disponibilidad del contenido en HD (720p), Full HD (1080p), Ultra HD (4K) y HDR depende de tu servicio de Internet y del dispositivo en uso. No todo el contenido está disponible en todas las resoluciones. Consulta nuestros <a href="#" data-i18n="termsOfUse">Términos de uso</a> para obtener más información.
+                </p>
+
+                <p class="plan-disclaimer">
+                    Solo las personas que vivan contigo pueden usar tu cuenta. Puedes ver Netflix en 4 dispositivos al mismo tiempo con el plan Premium, en 2 con el plan Estándar y en 1 con el plan Básico.
+                </p>
+
+                <p class="plan-disclaimer">
+                    Los eventos en vivo se incluyen en todos los planes de Netflix y contienen anuncios.
+                </p>
+
+                <button class="btn-primary" onclick="proceedToPayment()" data-i18n="nextButton">Siguiente</button>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer footer-simple">
+        <div class="container">
+            <p class="footer-contact"><span data-i18n="footerContact">¿Preguntas? Llama al</span> <a href="tel:018005191570">01 800 519 1570</a></p>
+            
+            <div class="footer-links-horizontal">
+                <a href="#" data-i18n="footerLink1">Preguntas frecuentes</a>
+                <a href="#" data-i18n="footerLink2">Centro de ayuda</a>
+                <a href="#" data-i18n="footerLink10">Términos de uso</a>
+                <a href="#" data-i18n="footerLink11">Privacidad</a>
+                <a href="#" data-i18n="footerLink12">Preferencias de cookies</a>
+                <a href="#" data-i18n="footerLink13">Información corporativa</a>
+            </div>
+            
+            <div class="language-selector footer-lang">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="globe-icon">
+                    <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm4.9 7.2h-2.5c-.1-1.5-.5-2.9-1.1-4.1 1.8.6 3.2 2 3.6 4.1zM8 14.4c-.8 0-2.1-2.6-2.3-5.6h4.6c-.2 3-1.5 5.6-2.3 5.6zm-.3-7.2c.2-3 1.5-5.6 2.3-5.6.8 0 2.1 2.6 2.3 5.6H7.7zm-1.1-4.1c-.6 1.2-1 2.6-1.1 4.1H3c.4-2.1 1.8-3.5 3.6-4.1zM3 8.8h2.5c.1 1.5.5 2.9 1.1 4.1-1.8-.6-3.2-2-3.6-4.1zm7.4 4.1c.6-1.2 1-2.6 1.1-4.1H13c-.4 2.1-1.8 3.5-3.6 4.1z"/>
+                </svg>
+                <select onchange="changeLang(this.value)">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" class="arrow-icon">
+                    <path d="M6 9L1 4h10z"/>
+                </svg>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/plan.js"></script>
+</body>
+</html>

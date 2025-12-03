@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix Colombia - Ve series online, ve películas online</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <img src="img/Netflix_2015_logo.svg.webp" alt="NETFLIX" class="logo">
+            <div class="header-actions">
+                <div class="language-selector">
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="globe-icon">
+                        <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm4.9 7.2h-2.5c-.1-1.5-.5-2.9-1.1-4.1 1.8.6 3.2 2 3.6 4.1zM8 14.4c-.8 0-2.1-2.6-2.3-5.6h4.6c-.2 3-1.5 5.6-2.3 5.6zm-.3-7.2c.2-3 1.5-5.6 2.3-5.6.8 0 2.1 2.6 2.3 5.6H7.7zm-1.1-4.1c-.6 1.2-1 2.6-1.1 4.1H3c.4-2.1 1.8-3.5 3.6-4.1zM3 8.8h2.5c.1 1.5.5 2.9 1.1 4.1-1.8-.6-3.2-2-3.6-4.1zm7.4 4.1c.6-1.2 1-2.6 1.1-4.1H13c-.4 2.1-1.8 3.5-3.6 4.1z"/>
+                    </svg>
+                    <select>
+                        <option value="es">Español</option>
+                        <option value="en">English</option>
+                    </select>
+                    <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" class="arrow-icon">
+                        <path d="M6 9L1 4h10z"/>
+                    </svg>
+                </div>
+                <button class="btn-signin">Iniciar sesión</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Películas y series<br>ilimitadas y mucho más</h1>
+            <p class="hero-subtitle">A partir de $ 18.900. Cancela cuando quieras.</p>
+            <p class="hero-text">¿Quieres ver Netflix ya? Ingresa tu email para<br>crear una cuenta o reiniciar tu membresía de<br>Netflix.</p>
+            <form class="email-signup" id="emailForm">
+                <div class="email-wrapper">
+                    <input type="email" placeholder="Email" class="email-input" id="emailInput" required>
+                    <label class="email-label">Email</label>
+                    <span class="error-message">
+                        <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                            <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm-.8-3.2h1.6v1.6H7.2v-1.6zm0-6.4h1.6v4.8H7.2V4.8z"/>
+                        </svg>
+                        Escribe una dirección de email válida.
+                    </span>
+                </div>
+                <button type="submit" class="btn-start">
+                    <span class="btn-text">Comenzar</span>
+                    <span class="arrow">›</span>
+                    <span class="loader"></span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Tendencias Section -->
+    <section class="tendencias">
+        <div class="container">
+            <h2>Tendencias</h2>
+            <div class="carousel-container">
+                <button class="carousel-arrow carousel-arrow-left" aria-label="Anterior">‹</button>
+                <div class="carousel">
+                    <div class="carousel-item">
+                        <img src="img/stranger-things.jpg" alt="Stranger Things">
+                        <div class="number">1</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/one-piece1.jpg" alt="One Piece">
+                        <div class="number">2</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/survivor.jpg" alt="Survivor">
+                        <div class="number">3</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/frankestein.avif" alt="Frankestein">
+                        <div class="number">4</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/simplemente-alicia.jpg" alt="Simplemente Alicia">
+                        <div class="number">5</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/guerreras-kpop.jpg" alt="Guerreras Kpop">
+                        <div class="number">6</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/huesped.jpg" alt="Huesped">
+                        <div class="number">7</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/caramelo.jpg" alt="Caramelo">
+                        <div class="number">8</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/witcher.jpg" alt="Witcher">
+                        <div class="number">9</div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/pequeños-secretos.png" alt="Pequeños Secretos">
+                        <div class="number">10</div>
+                    </div>
+                </div>
+                <button class="carousel-arrow carousel-arrow-right" aria-label="Siguiente">›</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Más motivos para unirte Section -->
+    <section class="motivos">
+        <div class="container">
+            <h2>Más motivos para unirte</h2>
+            <div class="motivos-grid">
+                <div class="motivo-card">
+                    <h3>Disfruta en tu TV</h3>
+                    <p>Ve en smart TV, PlayStation, Xbox, Chromecast, Apple TV, reproductores de Blu-ray y más.</p>
+                    <div class="motivo-icon">
+                        <svg viewBox="0 0 100 100" class="icon-tv">
+                            <defs>
+                                <linearGradient id="tvGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e50914;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ff6b9d;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="15" y="25" width="70" height="45" rx="2" fill="url(#tvGradient)"/>
+                            <rect x="20" y="30" width="60" height="35" fill="rgba(26,26,26,0.3)"/>
+                            <rect x="42" y="72" width="16" height="3" fill="url(#tvGradient)"/>
+                            <rect x="38" y="76" width="24" height="2" fill="url(#tvGradient)"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="motivo-card">
+                    <h3>Descarga tus series para verlas offline</h3>
+                    <p>Guarda tu contenido favorito y siempre tendrás algo para ver.</p>
+                    <div class="motivo-icon">
+                        <svg viewBox="0 0 100 100" class="icon-download">
+                            <defs>
+                                <linearGradient id="downloadGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff006b;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ff5da2;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="50" cy="55" r="28" fill="url(#downloadGradient)"/>
+                            <path d="M50 40 L50 68 M50 68 L42 60 M50 68 L58 60" stroke="#fff" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="motivo-card">
+                    <h3>Disfruta donde quieras</h3>
+                    <p>Películas y series ilimitadas en tu teléfono, tablet, laptop y TV.</p>
+                    <div class="motivo-icon">
+                        <svg viewBox="0 0 100 100" class="icon-devices">
+                            <defs>
+                                <linearGradient id="devicesGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#e50914;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ff79c6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="58" y="35" width="18" height="30" rx="2" fill="url(#devicesGradient)"/>
+                            <circle cx="72" cy="52" r="3" fill="rgba(255,255,255,0.3)"/>
+                            <path d="M 25 45 L 50 35 L 50 65 L 25 55 Z" fill="url(#devicesGradient)"/>
+                            <circle cx="30" cy="50" r="2" fill="rgba(255,255,255,0.4)"/>
+                        </svg>
+                    </div>
+                </div>
+                <div class="motivo-card">
+                    <h3>Crea perfiles para niños</h3>
+                    <p>Los niños vivirán aventuras con sus personajes favoritos en un espacio diseñado exclusivamente para ellos, gratis con tu membresía.</p>
+                    <div class="motivo-icon">
+                        <svg viewBox="0 0 100 100" class="icon-kids">
+                            <defs>
+                                <linearGradient id="kidsGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ff0080;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ff79c6;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <rect x="28" y="42" width="44" height="28" rx="3" fill="url(#kidsGradient)"/>
+                            <rect x="33" y="48" width="15" height="10" rx="1" fill="rgba(255,255,255,0.3)"/>
+                            <rect x="52" y="48" width="15" height="10" rx="1" fill="rgba(255,255,255,0.3)"/>
+                            <path d="M 42 62 Q 50 66 58 62" stroke="rgba(255,255,255,0.5)" stroke-width="2" fill="none" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq">
+        <div class="container">
+            <h2>Preguntas frecuentes</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Qué es Netflix?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Netflix es un servicio de streaming que ofrece una gran variedad de películas, series y documentales premiados en casi cualquier pantalla conectada a internet.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cuánto cuesta Netflix?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Disfruta Netflix en tu smartphone, tablet, smart TV, laptop o dispositivo de streaming, todo por una tarifa plana mensual. Planes desde $18.900 hasta $44.900 al mes. Sin costos adicionales ni contratos.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Dónde puedo ver Netflix?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Disfruta donde quieras, cuando quieras. Inicia sesión en tu cuenta de Netflix para ver contenido al instante a través de netflix.com desde tu computadora personal o en cualquier dispositivo con conexión a internet.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Cómo cancelo?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Netflix es flexible. Sin contratos molestos ni compromisos. Cancela tu cuenta online con solo dos clics. Sin cargos por cancelación. Empieza o termina tu suscripción en cualquier momento.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Qué puedo ver en Netflix?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Netflix tiene un amplio catálogo de películas, series, documentales, animes, originales premiados y más. Todo lo que quieras ver, cuando quieras.</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question">
+                        ¿Es bueno Netflix para los niños?
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>La experiencia de Netflix para niños está incluida en la membresía para que los padres tengan el control mientras los peques disfrutan series y películas familiares en su propio espacio.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="email-signup-bottom">
+                <p>¿Quieres ver Netflix ya? Ingresa tu email para crear una cuenta o reiniciar tu membresía de Netflix.</p>
+                <form class="email-signup" id="emailFormBottom">
+                    <div class="email-wrapper">
+                        <input type="email" placeholder="Email" class="email-input" id="emailInputBottom" required>
+                        <label class="email-label">Email</label>
+                        <span class="error-message">
+                            <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor">
+                                <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm0 14.4A6.4 6.4 0 118 1.6a6.4 6.4 0 010 12.8zm-.8-3.2h1.6v1.6H7.2v-1.6zm0-6.4h1.6v4.8H7.2V4.8z"/>
+                            </svg>
+                            Escribe una dirección de email válida.
+                        </span>
+                    </div>
+                    <button type="submit" class="btn-start">
+                        <span class="btn-text">Comenzar</span>
+                        <span class="arrow">›</span>
+                        <span class="loader"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p class="footer-contact">¿Preguntas? Llama al <a href="tel:018005191570">01 800 519 1570</a></p>
+            <div class="footer-links">
+                <div class="footer-column">
+                    <a href="#">Preguntas frecuentes</a>
+                    <a href="#">Centro de ayuda</a>
+                    <a href="#">Cuenta</a>
+                    <a href="#">Prensa</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Relaciones con inversionistas</a>
+                    <a href="#">Empleo</a>
+                    <a href="#">Canjear tarjetas de regalo</a>
+                    <a href="#">Comprar tarjetas de regalo</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Formas de ver</a>
+                    <a href="#">Términos de uso</a>
+                    <a href="#">Privacidad</a>
+                    <a href="#">Preferencias de cookies</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Información corporativa</a>
+                    <a href="#">Contáctanos</a>
+                    <a href="#">Prueba de velocidad</a>
+                    <a href="#">Avisos legales</a>
+                </div>
+                <div class="footer-column">
+                    <a href="#">Solo en Netflix</a>
+                </div>
+            </div>
+            <div class="language-selector footer-lang">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="globe-icon">
+                    <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm4.9 7.2h-2.5c-.1-1.5-.5-2.9-1.1-4.1 1.8.6 3.2 2 3.6 4.1zM8 14.4c-.8 0-2.1-2.6-2.3-5.6h4.6c-.2 3-1.5 5.6-2.3 5.6zm-.3-7.2c.2-3 1.5-5.6 2.3-5.6.8 0 2.1 2.6 2.3 5.6H7.7zm-1.1-4.1c-.6 1.2-1 2.6-1.1 4.1H3c.4-2.1 1.8-3.5 3.6-4.1zM3 8.8h2.5c.1 1.5.5 2.9 1.1 4.1-1.8-.6-3.2-2-3.6-4.1zm7.4 4.1c.6-1.2 1-2.6 1.1-4.1H13c-.4 2.1-1.8 3.5-3.6 4.1z"/>
+                </svg>
+                <select>
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" class="arrow-icon">
+                    <path d="M6 9L1 4h10z"/>
+                </svg>
+            </div>
+            <p class="footer-country">Netflix Colombia</p>
+            <p class="footer-recaptcha">Esta página está protegida por Google reCAPTCHA para comprobar que no eres un robot. <a href="#">Más info.</a></p>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

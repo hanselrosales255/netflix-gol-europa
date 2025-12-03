@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Netflix</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/signup.css">
+</head>
+<body class="signup-page">
+    <header class="header-simple">
+        <div class="header-content">
+            <img src="img/Netflix_2015_logo.svg.webp" alt="NETFLIX" class="logo">
+            <button class="btn-signin" data-i18n="signin">Iniciar sesión</button>
+        </div>
+    </header>
+
+    <section class="check-email-section">
+        <div class="check-email-container">
+            <div class="mail-icon">
+                <img src="img/correo.png" alt="Mail icon" width="120" height="100">
+            </div>
+            
+            <p class="step-indicator" data-i18n="checkEmailStep">PASO 1 DE 3</p>
+            <h1 data-i18n="checkEmailTitle">Revisa tu bandeja de entrada</h1>
+            <p class="check-email-text">
+                <span data-i18n="checkEmailText">Enviamos un enlace de suscripción a</span>
+                <strong id="userEmailDisplay"></strong>.
+                <span data-i18n="checkEmailText2">Toca en el enlace del email para terminar de configurar tu cuenta.</span>
+            </p>
+            
+            <button class="btn-secondary" id="resendBtn" data-i18n="resendLink">Reenviar enlace</button>
+            <button class="btn-primary" id="createPasswordBtn" data-i18n="createPassword">Crear contraseña</button>
+        </div>
+    </section>
+
+    <footer class="footer footer-simple">
+        <div class="container">
+            <p class="footer-contact"><span data-i18n="footerContact">¿Preguntas? Llama al</span> <a href="tel:018005191570">01 800 519 1570</a></p>
+            
+            <div class="footer-links-horizontal">
+                <a href="#" data-i18n="footerLink1">Preguntas frecuentes</a>
+                <a href="#" data-i18n="footerLink2">Centro de ayuda</a>
+                <a href="#" data-i18n="footerLink10">Términos de uso</a>
+                <a href="#" data-i18n="footerLink11">Privacidad</a>
+                <a href="#" data-i18n="footerLink12">Preferencias de cookies</a>
+                <a href="#" data-i18n="footerLink13">Información corporativa</a>
+            </div>
+            
+            <div class="language-selector footer-lang">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="currentColor" class="globe-icon">
+                    <path d="M8 0a8 8 0 100 16A8 8 0 008 0zm4.9 7.2h-2.5c-.1-1.5-.5-2.9-1.1-4.1 1.8.6 3.2 2 3.6 4.1zM8 14.4c-.8 0-2.1-2.6-2.3-5.6h4.6c-.2 3-1.5 5.6-2.3 5.6zm-.3-7.2c.2-3 1.5-5.6 2.3-5.6.8 0 2.1 2.6 2.3 5.6H7.7zm-1.1-4.1c-.6 1.2-1 2.6-1.1 4.1H3c.4-2.1 1.8-3.5 3.6-4.1zM3 8.8h2.5c.1 1.5.5 2.9 1.1 4.1-1.8-.6-3.2-2-3.6-4.1zm7.4 4.1c.6-1.2 1-2.6 1.1-4.1H13c-.4 2.1-1.8 3.5-3.6 4.1z"/>
+                </svg>
+                <select onchange="changeLang(this.value)">
+                    <option value="es">Español</option>
+                    <option value="en">English</option>
+                </select>
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="currentColor" class="arrow-icon">
+                    <path d="M6 9L1 4h10z"/>
+                </svg>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/translations.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/check-email.js"></script>
+</body>
+</html>

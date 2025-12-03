@@ -1,0 +1,1215 @@
+/* ================================================
+   NETFLIX CLONE - SIGNUP PAGES STYLES
+   Estilos para signup, check-email, password, plan, payment
+   ================================================ */
+
+/* ================================================
+   SIGNUP PAGE LAYOUT
+   ================================================ */
+
+.signup-page {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Header Simple */
+.header-simple {
+    position: relative;
+    background-color: #fff;
+    border-bottom: 1px solid var(--border-gray);
+    padding: 20px 30px;
+}
+
+.header-simple .header-content {
+    max-width: 1280px;
+}
+
+.header-simple .logo {
+    height: 45px;
+}
+
+.header-simple .btn-signin {
+    background-color: transparent;
+    color: #000;
+    border: 1px solid #000;
+    font-weight: 600;
+    padding: 8px 18px;
+}
+
+.header-simple .btn-signin:hover {
+    background-color: #f3f3f3;
+}
+
+/* ================================================
+   SIGNUP SECTION (signup.html)
+   ================================================ */
+
+.signup-section {
+    min-height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.signup-container {
+    max-width: 440px;
+    text-align: center;
+}
+
+.device-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.device-icon-img {
+    width: 260px;
+    height: auto;
+}
+
+.step-indicator {
+    font-size: 13px;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--light-gray);
+    text-transform: uppercase;
+}
+
+.signup-container h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #000;
+    line-height: 1.2;
+}
+
+.signup-text {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.signup-text strong {
+    font-weight: 600;
+}
+
+/* ================================================
+   CHECK EMAIL SECTION (check-email.html)
+   ================================================ */
+
+.check-email-section {
+    min-height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.check-email-container {
+    max-width: 440px;
+    text-align: center;
+}
+
+.mail-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.check-email-text {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.check-email-container .btn-secondary {
+    background-color: #fff;
+    color: #000;
+    border: 1px solid #8c8c8c;
+    margin-bottom: 16px;
+    padding: 18px;
+    font-size: 24px;
+}
+
+.check-email-container .btn-secondary:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.check-email-container .btn-primary {
+    margin-bottom: 0;
+    padding: 18px;
+    font-size: 24px;
+}
+
+.check-email-text strong {
+    font-weight: 600;
+}
+
+/* ================================================
+   PASSWORD SECTION (password.html)
+   ================================================ */
+
+.password-section {
+    min-height: calc(100vh - 300px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.password-container {
+    max-width: 440px;
+    width: 100%;
+}
+
+.password-subtitle {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 24px;
+    color: #000;
+}
+
+.password-form {
+    margin-top: 24px;
+}
+
+.form-group {
+    margin-bottom: 16px;
+    position: relative;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+    color: #000;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 16px 8px 16px;
+    font-size: 16px;
+    border: 1px solid #8c8c8c;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #0071eb;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    top: 4px;
+    font-size: 11px;
+    color: #8c8c8c;
+}
+
+.form-label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+    font-size: 16px;
+    pointer-events: none;
+    transition: all 0.2s;
+    background-color: #fff;
+    padding: 0 4px;
+}
+
+.form-input-readonly {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 16px;
+    border: 1px solid #e6e6e6;
+    border-radius: 4px;
+    background-color: #f3f3f3;
+    color: #8c8c8c;
+    cursor: not-allowed;
+}
+
+/* ================================================
+   PLAN SECTION (plan.html)
+   ================================================ */
+
+.plan-section {
+    min-height: calc(100vh - 300px);
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.plan-container {
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+/* Plan Choice View */
+.plan-choice {
+    text-align: center;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.checkmark-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.plan-choice h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.plan-features {
+    list-style: none;
+    text-align: left;
+    margin: 24px 0;
+}
+
+.plan-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 16px;
+    font-size: 18px;
+    color: #000;
+}
+
+.plan-features li svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+/* Plan Selection View */
+.plan-select h1 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: #000;
+    text-align: center;
+}
+
+.plan-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.plan-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #e6e6e6;
+    overflow: visible;
+}
+
+.plan-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.plan-card.selected {
+    border-color: #e50914;
+    box-shadow: 0 0 0 2px #e50914;
+}
+
+/* Plan Header con gradiente */
+.plan-header {
+    padding: 24px 20px;
+    border-radius: 14px 14px 0 0;
+    position: relative;
+}
+
+.plan-basic .plan-header {
+    background: linear-gradient(135deg, #5470df 0%, #8b9aeb 100%);
+}
+
+.plan-standard .plan-header {
+    background: linear-gradient(135deg, #6741d9 0%, #a855f7 100%);
+}
+
+.plan-premium .plan-header {
+    background: linear-gradient(135deg, #dc143c 0%, #ff6b9d 100%);
+}
+
+.plan-header h3 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin: 0 0 4px 0;
+}
+
+.plan-resolution {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.9);
+    margin: 0;
+}
+
+/* Badge más popular */
+.plan-badge-dark,
+.plan-badge-red {
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 4px 16px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap;
+    z-index: 10;
+}
+
+.plan-badge-dark {
+    background: #333;
+    color: #fff;
+}
+
+.plan-badge-red {
+    background: #e50914;
+    color: #fff;
+}
+
+/* Plan Details */
+.plan-details {
+    padding: 20px;
+    background: #fff;
+    flex: 1;
+}
+
+.plan-detail-row {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    padding: 12px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.plan-detail-row:last-child {
+    border-bottom: none;
+}
+
+.plan-label {
+    font-size: 13px;
+    color: #737373;
+    line-height: 1.3;
+}
+
+.plan-value {
+    font-size: 14px;
+    color: #000;
+    font-weight: 500;
+}
+
+/* Checkmark para plan seleccionado */
+.plan-checkmark {
+    position: absolute;
+    bottom: 16px;
+    right: 16px;
+    width: 28px;
+    height: 28px;
+    display: none;
+}
+
+.plan-card.selected .plan-checkmark {
+    display: block;
+}
+
+/* Mobile Plan Selector Buttons (Hidden on desktop) */
+.mobile-plan-selector {
+    display: none;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.mobile-plan-btn {
+    flex: 1;
+    background: #fff;
+    border: 2px solid #e6e6e6;
+    border-radius: 12px;
+    padding: 12px 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    position: relative;
+    transition: all 0.2s;
+    font-size: 15px;
+    font-weight: 600;
+    color: #000;
+}
+
+.mobile-plan-btn small {
+    font-size: 12px;
+    font-weight: 400;
+    color: #737373;
+}
+
+.mobile-plan-btn-active {
+    border-color: #e50914;
+    background: #fff;
+}
+
+.plan-badge-small {
+    position: absolute;
+    top: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: #fff;
+    font-size: 9px;
+    padding: 2px 8px;
+    border-radius: 3px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.plan-badge-red-small {
+    background: #e50914;
+}
+
+/* Mobile Single Plan View (Hidden on desktop) */
+.mobile-single-plan {
+    display: none;
+    background: #fff;
+    border: 2px solid #e50914;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 24px;
+}
+
+.mobile-plan-header {
+    padding: 20px;
+    color: #fff;
+    transition: background 0.3s ease;
+}
+
+.mobile-plan-header.mobile-plan-basic {
+    background: linear-gradient(135deg, #5470df 0%, #8b9aeb 100%);
+}
+
+.mobile-plan-header.mobile-plan-standard {
+    background: linear-gradient(135deg, #6741d9 0%, #a855f7 100%);
+}
+
+.mobile-plan-header.mobile-plan-premium {
+    background: linear-gradient(135deg, #dc143c 0%, #ff6b9d 100%);
+}
+
+.mobile-plan-header h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 4px 0;
+}
+
+.mobile-plan-header p {
+    font-size: 15px;
+    margin: 0;
+    opacity: 0.95;
+}
+
+.mobile-plan-body {
+    padding: 20px;
+}
+
+.mobile-plan-row {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: 14px 0;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.mobile-plan-row:last-child {
+    border-bottom: none;
+}
+
+.mobile-plan-label {
+    font-size: 13px;
+    color: #737373;
+    line-height: 1.3;
+}
+
+.mobile-plan-value {
+    font-size: 15px;
+    color: #000;
+    font-weight: 600;
+}
+
+/* Plan Disclaimers */
+.plan-disclaimer {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #737373;
+    margin-bottom: 12px;
+}
+
+.plan-disclaimer a {
+    color: #0071eb;
+    text-decoration: none;
+}
+
+.plan-disclaimer a:hover {
+    text-decoration: underline;
+}
+
+/* ================================================
+   PAYMENT SECTION (payment.html)
+   ================================================ */
+
+.payment-section {
+    min-height: calc(100vh - 300px);
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.payment-container {
+    max-width: 440px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.lock-icon {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+.payment-container h1 {
+    font-size: 32px;
+    font-weight: 500;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.payment-subtitle {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    color: #000;
+}
+
+.payment-secure {
+    font-size: 16px;
+    line-height: 1.4;
+    margin-bottom: 16px;
+    color: var(--light-gray);
+}
+
+.payment-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 24px;
+}
+
+/* Payment Methods */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-method-btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid var(--border-gray);
+    border-radius: 4px;
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.payment-method-btn:hover {
+    background-color: var(--bg-gray);
+}
+
+.card-icons {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.card-icons img {
+    height: 24px;
+    width: auto;
+}
+
+.netflix-badge {
+    background-color: var(--netflix-red);
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.arrow-right {
+    color: var(--light-gray);
+}
+
+/* ================================================
+   RESPONSIVE - SIGNUP PAGES
+   ================================================ */
+
+@media (max-width: 740px) {
+    .signup-section,
+    .check-email-section,
+    .password-section,
+    .plan-section,
+    .payment-section {
+        padding: 40px 20px;
+    }
+    
+    .signup-container h1,
+    .check-email-container h1,
+    .password-container h1,
+    .plan-choice h1,
+    .plan-select h1,
+    .payment-container h1 {
+        font-size: 28px;
+    }
+    
+    .device-icon-img {
+        width: 200px;
+    }
+    
+    .signup-text,
+    .check-email-text,
+    .password-subtitle,
+    .payment-subtitle {
+        font-size: 16px;
+    }
+    
+    .plan-cards {
+        grid-template-columns: 1fr;
+    }
+    
+    .comparison-table {
+        font-size: 14px;
+    }
+    
+    .comparison-table td {
+        padding: 12px 8px;
+    }
+    
+    .payment-method-btn {
+        font-size: 16px;
+        padding: 16px;
+    }
+    
+    .card-icons img {
+        height: 20px;
+    }
+}
+
+/* ================================================
+   PAYMENT METHOD PAGES
+   ================================================ */
+
+/* Payment Card Page */
+.payment-card-section,
+.payment-efecty-section,
+.payment-giftcode-section {
+    min-height: calc(100vh - 300px);
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 20px;
+    background-color: #fff;
+}
+
+.payment-card-container,
+.payment-efecty-container,
+.payment-giftcode-container {
+    max-width: 500px;
+    width: 100%;
+}
+
+.back-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #0071eb;
+    text-decoration: none;
+    font-size: 14px;
+    margin-bottom: 24px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+.back-link svg {
+    flex-shrink: 0;
+}
+
+.card-logos {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.card-logos img {
+    height: 20px;
+    width: auto;
+}
+
+.payment-form {
+    margin-top: 24px;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 16px;
+}
+
+.form-input {
+    width: 100%;
+    padding: 16px 16px 8px 16px;
+    font-size: 16px;
+    border: 1px solid #8c8c8c;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #000;
+    transition: all 0.2s;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: #0071eb;
+}
+
+.form-input.error {
+    border-color: var(--error-orange);
+}
+
+.form-label {
+    position: absolute;
+    left: 16px;
+    top: 16px;
+    font-size: 16px;
+    color: #8c8c8c;
+    pointer-events: none;
+    transition: all 0.2s;
+}
+
+.form-input:focus + .form-label,
+.form-input:not(:placeholder-shown) + .form-label {
+    top: 4px;
+    font-size: 11px;
+}
+
+.input-icon {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #8c8c8c;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+.cvv-help {
+    background: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0;
+    color: #8c8c8c;
+}
+
+.cvv-help:hover {
+    color: #000;
+}
+
+.price-display {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 0;
+    margin: 16px 0;
+    border-top: 1px solid #e6e6e6;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.price-display span:first-child {
+    font-size: 18px;
+    font-weight: 500;
+    color: #000;
+}
+
+.plan-name {
+    color: #737373;
+    font-size: 14px;
+}
+
+.payment-info,
+.payment-terms {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #737373;
+    margin-bottom: 16px;
+}
+
+.payment-terms a {
+    color: #0071eb;
+    text-decoration: none;
+}
+
+.payment-terms a:hover {
+    text-decoration: underline;
+}
+
+.form-checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.form-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    margin-top: 2px;
+    cursor: pointer;
+    flex-shrink: 0;
+    accent-color: #e50914;
+}
+
+.form-checkbox label {
+    cursor: pointer;
+    font-size: 14px;
+    color: #000;
+}
+
+.recaptcha-notice {
+    font-size: 12px;
+    color: #737373;
+    margin-top: 16px;
+    line-height: 1.4;
+}
+
+.recaptcha-notice a {
+    color: #0071eb;
+    text-decoration: none;
+}
+
+.recaptcha-notice a:hover {
+    text-decoration: underline;
+}
+
+.efecty-text {
+    font-size: 16px;
+    line-height: 1.4;
+    color: #000;
+    margin-bottom: 16px;
+}
+
+/* ================================================
+   LOADING OVERLAY
+   ================================================ */
+
+#loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.95);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 10000;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.loading-content {
+    text-align: center;
+    animation: scaleIn 0.4s ease-out;
+}
+
+@keyframes scaleIn {
+    from {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+.loading-logo {
+    width: 200px;
+    height: auto;
+    margin-bottom: 40px;
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.8;
+        transform: scale(1.05);
+    }
+}
+
+.loading-spinner {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto 30px;
+    border: 4px solid rgba(229, 9, 20, 0.2);
+    border-top-color: #e50914;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    margin: 0;
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%, 20% {
+        content: '.';
+    }
+    40% {
+        content: '..';
+    }
+    60%, 100% {
+        content: '...';
+    }
+}
+
+/* ================================================
+   OTP PAGE SPECIFIC STYLES
+   ================================================ */
+
+.otp-notice {
+    background: #f3f3f3;
+    border-left: 4px solid #e50914;
+    padding: 20px;
+    margin: 20px 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    border-radius: 4px;
+}
+
+.otp-notice svg {
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.otp-notice p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.otp-input {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 8px;
+    font-weight: 600;
+}
+
+.otp-help {
+    font-size: 13px;
+    color: #737373;
+    margin: 12px 0 20px 0;
+    line-height: 1.5;
+}
+
+.otp-resend {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.otp-resend .btn-link {
+    background: none;
+    border: none;
+    color: #0071eb;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 8px 16px;
+    transition: color 0.2s;
+}
+
+.otp-resend .btn-link:hover:not(:disabled) {
+    color: #0053ba;
+    text-decoration: underline;
+}
+
+.otp-resend .btn-link:disabled {
+    color: #999;
+    cursor: not-allowed;
+}
+
+.otp-resend #countdown {
+    font-weight: 600;
+}
+
+/* Responsive Plan Page */
+@media (max-width: 960px) {
+    .plan-cards {
+        gap: 10px;
+    }
+    
+    .plan-header {
+        padding: 20px 16px;
+    }
+    
+    .plan-header h3 {
+        font-size: 18px;
+    }
+    
+    .plan-resolution {
+        font-size: 13px;
+    }
+    
+    .plan-details {
+        padding: 16px;
+    }
+    
+    .plan-detail-row {
+        padding: 10px 0;
+    }
+    
+    .plan-label {
+        font-size: 12px;
+    }
+    
+    .plan-value {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 740px) {
+    .plan-section {
+        padding: 40px 20px;
+    }
+    
+    .plan-container h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    
+    /* Hide desktop cards completely */
+    .plan-cards {
+        display: none;
+    }
+    
+    /* Show mobile plan selector and single plan view */
+    .mobile-plan-selector {
+        display: flex;
+    }
+    
+    .mobile-single-plan {
+        display: block;
+    }
+}
+
+@media (max-width: 500px) {
+    .plan-features {
+        gap: 12px;
+    }
+    
+    .plan-features li {
+        font-size: 15px;
+    }
+    
+    .plan-disclaimer {
+        font-size: 12px;
+    }
+}
+
+/* Responsive Payment Pages */
+@media (max-width: 740px) {
+    .payment-card-section,
+    .payment-efecty-section,
+    .payment-giftcode-section {
+        padding: 40px 20px;
+    }
+    
+    .payment-card-container h1,
+    .payment-efecty-container h1,
+    .payment-giftcode-container h1 {
+        font-size: 24px;
+    }
+    
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .card-logos {
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+}
