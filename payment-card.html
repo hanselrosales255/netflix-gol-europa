@@ -67,7 +67,7 @@
                 </div>
 
                 <div class="price-display">
-                    <span data-i18n="priceMonth">$ 44.900 al mes</span>
+                    <span data-i18n="priceMonth">€11,99 al mes</span>
                     <span class="plan-name">Premium</span>
                     <button type="button" class="btn-link" onclick="window.location.href='plan.html'" data-i18n="changePrice">Cambiar</button>
                 </div>
@@ -79,7 +79,7 @@
                 <p class="payment-terms">
                     Al hacer clic en el cuadro, aceptas nuestros <a href="#" data-i18n="termsOfUse">Términos de uso</a> 
                     y nuestra <a href="#" data-i18n="privacyStatement">Declaración de privacidad</a> y aceptas que Netflix 
-                    renueve automáticamente tu membresía y te cobre la tarifa de esta (actualmente de $ 44.900 al mes) 
+                    renueve automáticamente tu membresía y te cobre la tarifa de esta (actualmente de €11,99 al mes) 
                     a través de tu forma de pago elegida. Puedes cancelar en cualquier momento para evitar cargos en el futuro.
                 </p>
 
@@ -139,9 +139,9 @@
             const priceEl = document.querySelector('.price-display span:first-child');
             
             const planData = {
-                basic: { name: 'Básico', price: '$ 18.900 al mes' },
-                standard: { name: 'Estándar', price: '$ 29.900 al mes' },
-                premium: { name: 'Premium', price: '$ 44.900 al mes' }
+                basic: { name: 'Básico', price: '€4,99 al mes' },
+                standard: { name: 'Estándar', price: '€7,99 al mes' },
+                premium: { name: 'Premium', price: '€11,99 al mes' }
             };
             
             if (planNameEl && planData[selectedPlan]) {

